@@ -1,6 +1,13 @@
 @import url(font-awesome.min.css);
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic,800,800italic");
 
+@font-face {
+	font-family: "Cadel";
+	src: url("../fonts/Grilli-Type-Trial-Fonts-2018-08/GT-Walsheim-Pro-Trial-Regular.otf")format("opentype");
+	font-weight: normal;
+    font-style: normal;
+}
+
 /*
 	Spectral by HTML5 UP
 	html5up.net | @ajlkn
@@ -3560,7 +3567,7 @@ input, select, textarea {
 		min-height: 35em;
 		overflow: hidden;
 		position: relative;
-		text-align: center;
+		text-align: left;
 	}
 
 		#banner h2 {
@@ -3568,19 +3575,24 @@ input, select, textarea {
 			-webkit-transform: scale(1);
 			-ms-transform: scale(1);
 			transform: scale(1);
-			-moz-transition: -moz-transform 0.5s ease, opacity 0.5s ease;
-			-webkit-transition: -webkit-transform 0.5s ease, opacity 0.5s ease;
-			-ms-transition: -ms-transform 0.5s ease, opacity 0.5s ease;
-			transition: transform 0.5s ease, opacity 0.5s ease;
+			-moz-transition: -moz-transform 0.25s ease, opacity 5s ease;
+			-webkit-transition: -webkit-transform 0.25s ease, opacity 5s ease;
+			-ms-transition: -ms-transform 0.25s ease, opacity 5s ease;
+			transition: transform 0.25s ease, opacity 5s ease;
 			display: inline-block;
-			font-size: 1.75em;
+			font-family: 'Cadel', Arial, sans-serif;
+			font-size: 75px;
+			line-height: 1.42em;
+			letter-spacing: 0.02em;
 			opacity: 1;
-			padding: 0.5em 0em;
+			padding: 0.1em 0em;
+			padding-left: 0.2em;
+			margin-bottom: 0.3em;
 			position: relative;
 			z-index: 1;
 		}
 
-			#banner h2:before, #banner h2:after {
+			/* #banner h2:before, #banner h2:after {
 				-moz-transition: width 0.85s ease;
 				-webkit-transition: width 0.85s ease;
 				-ms-transition: width 0.85s ease;
@@ -3595,6 +3607,23 @@ input, select, textarea {
 				height: 5px;
 				position: absolute;
 				width: 100%;
+			} */
+
+			#banner h2:after {
+				-moz-transition: width 1.85s ease;
+				-webkit-transition: width 1.85s ease;
+				-ms-transition: width 1.85s ease;
+				transition: width 1.85s ease;
+				-moz-transition-delay: 0.25s;
+				-webkit-transition-delay: 0.25s;
+				-ms-transition-delay: 0.25s;
+				transition-delay: 0.25s;
+				background: #fff;
+				content: '';
+				display: block;
+				height: 4px;
+				position: absolute;
+				width: 102%;
 			}
 
 			#banner h2:before {
@@ -3604,19 +3633,23 @@ input, select, textarea {
 
 			#banner h2:after {
 				bottom: 0;
-				right: 0;
+				/* right: 0; */
+				left: 0;
 			}
 
 		#banner p {
-			letter-spacing: 0.225em;
+
+			font-family: 'Cadel';
+			letter-spacing: 0.825em;
 			text-transform: uppercase;
+			margin-left: 1.5em;
 		}
 
 			#banner p a {
 				color: inherit;
 			}
 
-		#banner .more {
+		/* #banner .more {
 			-moz-transition: -moz-transform 0.75s ease, opacity 0.75s ease;
 			-webkit-transition: -webkit-transform 0.75s ease, opacity 0.75s ease;
 			-ms-transition: -ms-transform 0.75s ease, opacity 0.75s ease;
@@ -3660,7 +3693,53 @@ input, select, textarea {
 				margin: 0 0 0 -0.75em;
 				position: absolute;
 				width: 1.5em;
+			} */
+
+			#banner .more {
+				-moz-transition: -moz-transform 0.75s ease, opacity 0.75s ease;
+				-webkit-transition: -webkit-transform 0.75s ease, opacity 0.75s ease;
+				-ms-transition: -ms-transform 0.75s ease, opacity 0.75s ease;
+				transition: transform 0.75s ease, opacity 0.75s ease;
+				-moz-transition-delay: 3.5s;
+				-webkit-transition-delay: 3.5s;
+				-ms-transition-delay: 3.5s;
+				transition-delay: 3.5s;
+				-moz-transform: translateY(0);
+				-webkit-transform: translateY(0);
+				-ms-transform: translateY(0);
+				transform: translateY(0);
+				border: none;
+				top: 47%;
+				color: inherit;
+				font-size: 0.8em;
+				height: 8.5em;
+				right: 0;
+				letter-spacing: 0.225em;
+				/* margin-left: -8.5em; */
+				opacity: 1;
+				outline: 0;
+				padding-left: 0.225em;
+				position: absolute;
+				text-align: center;
+				text-transform: uppercase;
+				width: 12em;
+				z-index: 1;
 			}
+	
+				#banner .more:after {
+					background-image: url("images/arrow.svg");
+					background-position: center;
+					background-repeat: no-repeat;
+					background-size: contain;
+					bottom: 4em;
+					content: '';
+					display: block;
+					height: 3.7em;
+					left: 50%;
+					margin: 0 0 0 -0.25em;
+					position: absolute;
+					width: 2em;
+				}
 
 		#banner:after {
 			pointer-events: none;
